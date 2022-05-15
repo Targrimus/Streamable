@@ -8,8 +8,8 @@ Animal a;
 
 Bird b;
 
-std::cout << a << ", " << b << std::endl;
+Crow c;
+
+std::cout << a << ", " << b << ", " << c << std::endl;
 
 };
-
-
