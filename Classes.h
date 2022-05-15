@@ -24,7 +24,7 @@ class Animal : public Streamable {
 
 public:
     virtual void stream_insert(std::ostream& out) const override{
-        out << *m_description;
+        out << this->m_description;
     }
 };
 
@@ -37,9 +37,23 @@ class Bird : public Animal{
 
 public:
     virtual void stream_insert(std::ostream& out) const override{
-        out << *m_description;
+        out << this->m_description;
     }
 };
+
+
+/*
+*   CORW CLASS
+*/
+class Crow : public Bird{
+    const char * m_description = "Crow";
+
+public:
+    virtual void stream_insert(std::ostream& out) const override{
+        out << this->m_description;
+    }
+};
+
 
 
 
